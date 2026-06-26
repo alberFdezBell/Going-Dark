@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://800m5tx6xmsg" path="res://scenes/main_menu/main_menu.gd" id="1_fsom3"]
 
+[sub_resource type="FontVariation" id="FontVariation_ob46e"]
+
 [node name="MainMenu" type="Control" unique_id=1465336364]
 layout_mode = 3
 anchors_preset = 15
@@ -18,8 +20,9 @@ offset_bottom = 40.0
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2084915772]
 layout_mode = 0
+offset_top = 45.45
 offset_right = 1280.0
-offset_bottom = 717.0
+offset_bottom = 762.45
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
@@ -27,32 +30,31 @@ theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=100279457]
 layout_mode = 2
+offset_transform_enabled = true
 alignment = 1
-
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1010591826]
-layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Juego Miedo mucho miedo"
-horizontal_alignment = 1
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=169170005]
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 15
 alignment = 1
 
 [node name="NewGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=840064588]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 text = "Nueva partida"
 
 [node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=407045100]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 text = "Continuar partida"
 
 [node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1415698142]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 text = "Configuración"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1000364609]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 text = "Salir"
 
@@ -66,6 +68,17 @@ offset_bottom = 670.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 44
 text = "No hay partida"
+
+[node name="Title" type="Label" parent="." unique_id=1010591826]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 122.0
+offset_right = 677.0
+offset_bottom = 210.0
+theme_override_fonts/font = SubResource("FontVariation_ob46e")
+theme_override_font_sizes/font_size = 64
+text = "Ecos de Luna Blanca"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

@@ -5,6 +5,6 @@
 [node name="Label" type="Label" parent="." unique_id=743847200]
 offset_left = 212.0
 offset_top = 162.0
-offset_right = 458.0
-offset_bottom = 279.0
-text = "configuraciones"
+offset_right = 320.0
+offset_bottom = 185.0
+text = "Configuración"
