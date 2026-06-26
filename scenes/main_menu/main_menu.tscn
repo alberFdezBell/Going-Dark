@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://v164jgyakedo"]
+
+[ext_resource type="Script" uid="uid://800m5tx6xmsg" path="res://scenes/main_menu/main_menu.gd" id="1_fsom3"]
+
+[node name="MainMenu" type="Control" unique_id=1465336364]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fsom3")
+
+[node name="Background" type="TextureRect" parent="." unique_id=631695527]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2084915772]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 717.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=100279457]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1010591826]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Juego Miedo mucho miedo"
+horizontal_alignment = 1
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=169170005]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=840064588]
+layout_mode = 2
+text = "Nueva partida"
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=407045100]
+layout_mode = 2
+text = "Continuar partida"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1415698142]
+layout_mode = 2
+text = "Configuración"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1000364609]
+layout_mode = 2
+text = "Salir"
+
+[node name="MessageLabel" type="Label" parent="." unique_id=596765448]
+visible = false
+layout_mode = 0
+offset_left = 472.0
+offset_top = 585.0
+offset_right = 814.0
+offset_bottom = 670.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "No hay partida"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]

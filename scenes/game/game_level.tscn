@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://do6cmo7y37gg"]
+
+[node name="GameLevel" type="Node2D" unique_id=303937645]
+
+[node name="Label" type="Label" parent="." unique_id=519845284]
+offset_left = 143.0
+offset_top = 72.0
+offset_right = 1032.0
+offset_bottom = 515.0
+text = "Prueba"
